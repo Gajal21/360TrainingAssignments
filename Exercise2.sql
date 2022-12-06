@@ -15,13 +15,10 @@ SELECT ProductName  from `products` limit 4,11;
 SELECT * FROM `suppliers` where `SupplierName` LIKE '_A%';
 
 -- Question 6
- SELECT *  FROM  `customers` where Country <>"USA" AND Country <> "Canada";
+SELECT *  FROM  `customers` where Country <>"USA" AND Country <> "Canada";
  
 -- Question 7
--- Print the details of all the orders which were placed between
--- the year 2020 to 2021 also print the same in descending order
--- from the OrderDetails table
--- Problem with the question 
+SELECT * FROM `orders` where YEAR(OrderDate) IN(2020,2021) order by YEAR(OrderDate) desc ;
 
 -- Question 8 
 SELECT DISTINCT `City` AS "Distinct_CITY" FROM `customers`;
